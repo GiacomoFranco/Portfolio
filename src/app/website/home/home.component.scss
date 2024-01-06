@@ -1,0 +1,49 @@
+:host{
+  color: white;
+  display: block;
+}
+
+.banner{
+  background-color: var(--main-black);
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  .content{
+    justify-content: start;
+    align-items: end;
+    padding-bottom: 24vh;
+
+    .title-element{
+      max-width: 86.9rem;
+
+      .title{
+        font-size: clamp(1.6rem, var(--grow-ratio) , 15.6rem ); // 7.4219vw
+        line-height: 0.8245em;
+
+        @supports not (-webkit-text-stroke: var(--main-green)) {
+          .underscore{
+            color: black;
+            text-shadow:
+              .1rem .1rem 0 var(--main-green),
+              -.1rem .1rem 0 var(--main-green),
+              -.1rem -.1rem 0 var(--main-green),
+              .1rem -.1rem 0 var(--main-green);
+          }
+        }
+
+        .underscore {
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke: .1rem var(--main-green);
+        }
+
+      }
+    }
+  }
+
+}
+
+.banner-2{
+  background-color: aqua;
+}
