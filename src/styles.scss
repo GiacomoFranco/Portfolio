@@ -1,33 +1,106 @@
-
-//import styles
-@import url("https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap");
-
 * {
-  font-family: "Inter", sans-serif;
+  font-family: 'GalanoGrotesque', sans-serif;
   box-sizing: border-box;
+  font-weight: 800;
+  margin: 0;
+  padding: 0;
 }
 
-/** Colors */
 :root {
   --main-black: #09090B;
   --main-green: #DCFF00;
   --main-white: #FFFFFF;
+
+  --max-width: 1521px;
+  --grow-ratio: 7.7vw;
+  font-size: 62.5%;
 }
 
 html {
-  font-size: 15px;
-
+  font-size: 1.6rem;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   overflow-x: hidden;
-  // -ms-overflow-style: none !important;
-  // scrollbar-width: none !important;
 }
 
 body::-webkit-scrollbar {
-  // display: none !important;
+  display: none !important;
 }
 
+section{
+  display: flex;
+}
+
+.section-container{
+  max-width: var(--max-width);
+  height: 100%;
+  flex-grow: 1;
+  margin: 0 22rem;
+
+  .content{
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+
+/* Fonts
+--------------------------------------------- */
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('assets/fonts/GalanoGrotesque/GalanoGrotesqueBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('assets/fonts/GalanoGrotesque/GalanoGrotesqueExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('assets/fonts/GalanoGrotesque/GalanoGrotesqueExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('assets/fonts/GalanoGrotesque/GalanoGrotesqueLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('assets/fonts/GalanoGrotesque/GalanoGrotesqueLightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('assets/fonts/GalanoGrotesque/GalanoGrotesqueMedium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('assets/fonts/GalanoGrotesque/GalanoGrotesqueRegular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('assets/fonts/GalanoGrotesque/GalanoGrotesqueSemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
