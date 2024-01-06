@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+
+//import styles
+@import url("https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+/** Colors */
+:root {
+  --main-black: #09090B;
+  --main-green: #DCFF00;
+  --main-white: #FFFFFF;
+}
+
+html {
+  font-size: 15px;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  // -ms-overflow-style: none !important;
+  // scrollbar-width: none !important;
+}
+
+body::-webkit-scrollbar {
+  // display: none !important;
+}
+
