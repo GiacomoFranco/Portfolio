@@ -10,6 +10,7 @@
   --main-black: #09090B;
   --main-green: #DCFF00;
   --main-white: #FFFFFF;
+  --main-gray: #9C9C9C;
 
   --max-width: 1521px;
   --grow-ratio: 7.7vw;
@@ -22,6 +23,7 @@ html {
 
 body {
   overflow-x: hidden;
+  width: 100vw;
 }
 
 body::-webkit-scrollbar {
@@ -36,7 +38,7 @@ section{
   max-width: var(--max-width);
   height: 100%;
   flex-grow: 1;
-  margin: 0 22rem;
+  margin: 0 clamp( 7rem, var(--grow-ratio), 22rem) ;
 
   .content{
     display: flex;

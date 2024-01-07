@@ -1,6 +1,7 @@
 :host{
   color: white;
   display: block;
+  position: relative;
 }
 
 .banner{
@@ -19,7 +20,7 @@
       max-width: 86.9rem;
 
       .title{
-        font-size: clamp(1.6rem, var(--grow-ratio) , 15.6rem ); // 7.4219vw
+        font-size: clamp(1.8rem, var(--grow-ratio) , 15.6rem );
         line-height: 0.8245em;
 
         @supports not (-webkit-text-stroke: var(--main-green)) {
@@ -45,5 +46,5 @@
 }
 
 .banner-2{
-  background-color: aqua;
+  background-color: black;
 }
