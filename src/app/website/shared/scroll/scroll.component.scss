@@ -1,0 +1,45 @@
+:host {
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: -26.2rem;
+  z-index: var(--z-index-fixed-elements);
+}
+
+.scroll{
+  --scrollbar-path-widh-height: 29.5rem;
+}
+
+.circle-path{
+  border: .1rem solid var(--main-gray);
+  border-radius: 50%;
+}
+
+.outside-path{
+  height: 39.8rem;
+  width: 39.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inside-path{
+  position: relative;
+  height: var(--scrollbar-path-widh-height);
+  width: var(--scrollbar-path-widh-height);
+  mix-blend-mode: color !important;
+}
+
+
+#scrollbar{
+  position: absolute;
+  width: calc(var(--scrollbar-path-widh-height) + .2rem);
+  height: calc(var(--scrollbar-path-widh-height) + .2rem);
+  top: 50%;
+  right: 50%;
+  border: 0.3rem solid var(--main-green);
+  transform: translate(50%, -50%) rotate(10deg); //-100deg
+
+  clip-path: polygon(50% 50%, 15% 0%, 0% 0%, 0% 15%);
+  z-index: 50;
+}

@@ -25,9 +25,14 @@
     ]
   },
   "angularCompilerOptions": {
+    "paths": {
+      "app/*": ["./src/app/*"],
+      "assets/*": ["./src/assets/*"]
+    },
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
+
   }
 }
