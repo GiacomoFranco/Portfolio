@@ -1,51 +1,47 @@
-:host{
+:host {
   display: block;
-  width: clamp(7rem, var(--grow-ratio), 22rem);
-  height: 100%;
   position: fixed;
-  top: 0;
-  left: 0;
+  transform-origin: left top;
+  bottom: calc(24vh - 2.177rem);
+  left: calc(5% - 2.75rem - (2.125rem/4));
+  transform: rotate(-90deg);
   z-index: var(--z-index-fixed-elements);
   mix-blend-mode: difference;
+  user-select: none;
 }
 
-.social-media{
+.social-media {
   display: flex;
-  flex-direction: column;
-  justify-content: end;
-  height: 100%;
-  padding-bottom: 24vh;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  height: 2.177rem;
 
-  &--icons{
+  &--icons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
 
-    // mix-blend-mode: difference;
+
     .media-icon {
-      // background-color: var(--main-black);
-      height: 1.7rem;
-      margin-bottom: 2.2rem;
+      scale: .8;
+      margin-left: 2.2rem;
       cursor: pointer;
+      transform: rotate(90deg);
     }
   }
 
   .follow-me {
-    height: 8.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     &--container {
-      position: relative;
-      top: 3.3rem;
-      // mix-blend-mode: difference;
       border-right: .1rem solid var(--main-white);
-      transform: rotate(-90deg);
+      transform: rotate(0deg);
       width: 8.5rem;
 
 
       .follow-me--text {
-        // mix-blend-mode: difference;
         color: var(--main-white);
         font-weight: 200;
         font-size: 1.5rem;
