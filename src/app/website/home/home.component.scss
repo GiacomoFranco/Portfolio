@@ -22,23 +22,6 @@
       .title{
         font-size: clamp(1.8rem, var(--grow-ratio) , 15.6rem );
         line-height: 0.8245em;
-
-        @supports not (-webkit-text-stroke: var(--main-green)) {
-          .underscore{
-            color: black;
-            text-shadow:
-              .1rem .1rem 0 var(--main-green),
-              -.1rem .1rem 0 var(--main-green),
-              -.1rem -.1rem 0 var(--main-green),
-              .1rem -.1rem 0 var(--main-green);
-          }
-        }
-
-        .underscore {
-          -webkit-text-fill-color: transparent;
-          -webkit-text-stroke: .1rem var(--main-green);
-        }
-
       }
     }
   }
@@ -46,5 +29,8 @@
 }
 
 .banner-2{
-  background-color: black;
+  background-color: white;
+  font-size: 25px;
+font-weight: 100;
+  color: var(--main-black);
 }
