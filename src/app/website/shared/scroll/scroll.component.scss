@@ -3,7 +3,7 @@
   top: 50%;
   transform: translate(0, -50%);
   right: -26.2rem;
-  z-index: 20;
+  z-index: var(--z-index-fixed-elements);
 }
 
 .scroll{
@@ -27,6 +27,7 @@
   position: relative;
   height: var(--scrollbar-path-widh-height);
   width: var(--scrollbar-path-widh-height);
+  mix-blend-mode: color !important;
 }
 
 
@@ -40,4 +41,5 @@
   transform: translate(50%, -50%) rotate(10deg); //-100deg
 
   clip-path: polygon(50% 50%, 15% 0%, 0% 0%, 0% 15%);
+  z-index: 50;
 }

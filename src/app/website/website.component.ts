@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ScrollComponent } from './shared/scroll/scroll.component';
+import { AsideComponent } from './shared/aside/aside.component';
 
 
 @Component({
   selector: 'app-website',
   standalone: true,
-  imports: [RouterOutlet, ScrollComponent],
+  imports: [RouterOutlet, ScrollComponent, AsideComponent],
   templateUrl: './website.component.html',
   styleUrl: './website.component.scss',
 })
