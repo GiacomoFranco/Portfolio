@@ -1,24 +1,9 @@
 * {
   font-family: 'GalanoGrotesque', sans-serif;
   box-sizing: border-box;
-  font-weight: 800;
+  // font-weight: 800;
   margin: 0;
   padding: 0;
-}
-
-.black-element::selection {
-  color: black !important;
-  -webkit-text-stroke: black;
-  background: var(--main-green);
-  mix-blend-mode: unset !important;
-}
-
-.white-element::selection {
-  background: white;
-  color: black !important;
-  -webkit-text-stroke: black;
-  background: var(--main-green);
-  mix-blend-mode: unset !important;
 }
 
 :root {
@@ -26,6 +11,20 @@
   --main-green: #DCFF00;
   --main-white: #FFFFFF;
   --main-gray: #9C9C9C;
+  --main-white-opacity: #ffffffdc;
+  --main-black-opacity: #000000f2;
+
+  --fs-xl: clamp(1.8rem, var(--grow-ratio), 14.6rem);
+  --fs-900: clamp(1.8rem, var(--grow-ratio), 10.4rem);
+  --fs-800: clamp(1.8rem, var(--grow-ratio), 8.2rem);
+  --fs-700: clamp(1.8rem, var(--grow-ratio), 7.2rem);
+  --fs-600: clamp(1.8rem, var(--grow-ratio), 5.4rem);
+  --fs-500: clamp(1.8rem, var(--grow-ratio), 5rem);
+  --fs-400: clamp(1.8rem, var(--grow-ratio), 2.2rem);
+  --fs-300: clamp(1.8rem, var(--grow-ratio), 1.8rem);
+  --fs-200: clamp(1.8rem, var(--grow-ratio), 3.1rem);
+  --fs-100: clamp(1.8rem, var(--grow-ratio), 1.5rem);
+
 
   --max-width: 1521px;
   --grow-ratio: 7.7vw;
@@ -63,10 +62,24 @@ section {
   }
 }
 
+.white-element::selection,
+.white-element div::selection,
+.white-element div span::selection {
+
+  background: var(--main-white-opacity);
+  color: var(--main-black)!important;
+}
+
+.black-element::selection,
+.black-element div::selection,
+.black-element div span::selection {
+  background: var(--main-black-opacity);
+  color: var(--main-white) !important;
+}
 
 @supports not (-webkit-text-stroke: var(--main-green)) {
   .green-outline {
-    color: black;
+    color: var(--main-black);
     text-shadow:
       .1rem .1rem 0 var(--main-green),
       -.1rem .1rem 0 var(--main-green),
@@ -84,7 +97,7 @@ section {
   }
 
   .black-outline {
-    color: white;
+    color: var(--main-white);
     text-shadow:
       .1rem .1rem 0 var(--main-black),
       -.1rem .1rem 0 var(--main-black),
@@ -102,7 +115,7 @@ section {
   }
 
   .white-outline {
-    color: black;
+    color: var(--main-black);
     text-shadow:
       .1rem .1rem 0 var(--main-white),
       -.1rem .1rem 0 var(--main-white),
@@ -127,6 +140,7 @@ section {
 
   &::selection {
     -webkit-text-stroke: .1rem var(--main-black);
+    // background-color: var(--main-green);
   }
 }
 
