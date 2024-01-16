@@ -14,7 +14,7 @@
   --main-white-opacity: #ffffffdc;
   --main-black-opacity: #000000f2;
 
-  --fs-xl: clamp(1.8rem, var(--grow-ratio), 14.6rem);
+  --fs-xl: clamp(3.8rem, var(--grow-ratio), 14.6rem);
   --fs-900: clamp(1.8rem, var(--grow-ratio), 10.4rem);
   --fs-800: clamp(1.8rem, var(--grow-ratio), 8.2rem);
   --fs-700: clamp(1.8rem, var(--grow-ratio), 7.2rem);
@@ -49,6 +49,30 @@ section {
   display: flex;
 }
 
+h1 {
+  font-size: var(--fs-xl);
+  font-weight: 800;
+  line-height: 0.89em;
+}
+
+h2 {
+  font-size: var(--fs-800);
+  font-weight: 800;
+  line-height: 0.85em;
+}
+
+h3 {
+  font-size: var(--fs-600);
+  font-weight: 800;
+  line-height: 1em;
+}
+
+p {
+  font-size: var(--fs-400);
+  font-weight: 200;
+  line-height: 1.43em;
+}
+
 .section-container {
   max-width: var(--max-width);
   height: 100%;
@@ -63,6 +87,7 @@ section {
 }
 
 .white-element::selection,
+.white-element br::selection,
 .white-element div::selection,
 .white-element div span::selection {
 
@@ -71,6 +96,7 @@ section {
 }
 
 .black-element::selection,
+.black-element br::selection,
 .black-element div::selection,
 .black-element div span::selection {
   background: var(--main-black-opacity);
