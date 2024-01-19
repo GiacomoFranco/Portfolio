@@ -1,12 +1,16 @@
 * {
   font-family: 'GalanoGrotesque', sans-serif;
   box-sizing: border-box;
-  // font-weight: 800;
   margin: 0;
   padding: 0;
 }
 
 :root {
+  font-size: 62.5%;
+  --max-width: 1521px;
+  --grow-ratio: 7.7vw;
+  --z-index-fixed-elements: 10;
+
   --main-black: #09090B;
   --main-green: #DCFF00;
   --main-white: #FFFFFF;
@@ -14,7 +18,7 @@
   --main-white-opacity: #ffffffdc;
   --main-black-opacity: #000000f2;
 
-  --fs-xl: clamp(3.8rem, var(--grow-ratio), 14.6rem);
+  --fs-xl: clamp(9.8rem, var(--grow-ratio), 14.6rem);
   --fs-900: clamp(1.8rem, var(--grow-ratio), 10.4rem);
   --fs-800: clamp(1.8rem, var(--grow-ratio), 8.2rem);
   --fs-700: clamp(1.8rem, var(--grow-ratio), 7.2rem);
@@ -24,12 +28,6 @@
   --fs-300: clamp(1.8rem, var(--grow-ratio), 1.8rem);
   --fs-200: clamp(1.8rem, var(--grow-ratio), 3.1rem);
   --fs-100: clamp(1.8rem, var(--grow-ratio), 1.5rem);
-
-
-  --max-width: 1521px;
-  --grow-ratio: 7.7vw;
-  --z-index-fixed-elements: 10;
-  font-size: 62.5%;
 }
 
 html {
@@ -92,7 +90,7 @@ p {
 .white-element div span::selection {
 
   background: var(--main-white-opacity);
-  color: var(--main-black)!important;
+  color: var(--main-black) !important;
 }
 
 .black-element::selection,
@@ -166,7 +164,6 @@ p {
 
   &::selection {
     -webkit-text-stroke: .1rem var(--main-black);
-    // background-color: var(--main-green);
   }
 }
 
@@ -187,8 +184,6 @@ p {
     -webkit-text-stroke: .1rem var(--main-black);
   }
 }
-
-
 
 
 /* Fonts
@@ -248,4 +243,31 @@ p {
   src: url('assets/fonts/GalanoGrotesque/GalanoGrotesqueSemiBold.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
+}
+
+/* Main Breakpoints
+--------------------------------------------- */
+
+@mixin for-phone-only {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
 }
