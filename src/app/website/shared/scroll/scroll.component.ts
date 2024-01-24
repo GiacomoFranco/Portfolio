@@ -11,7 +11,7 @@ import { gsap } from 'gsap';
 export class ScrollComponent {
   ngOnInit(): void {
     gsap.to('#scrollbar', {
-      transform: 'translate(50%, -50%) rotate(-100deg)',
+      transform: 'rotate(-100deg)',
       scrollTrigger: {
         scrub: true,
         trigger: '.banner',

@@ -1,13 +1,20 @@
+@import 'mixins';
+
 :host {
   display: block;
   position: fixed;
   transform-origin: left top;
   bottom: calc(24vh - 2.177rem);
-  left: calc(5% - 2.75rem - (2.125rem/4));
+  left: max(3vw, calc(5% - 2.75rem - (2.125rem/4)));
   transform: rotate(-90deg);
   z-index: var(--z-index-fixed-elements);
   mix-blend-mode: difference;
   user-select: none;
+
+  @include for-small-tablet-portrait{
+    display: none;
+  }
+
 }
 
 .social-media {

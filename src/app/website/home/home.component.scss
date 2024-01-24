@@ -1,5 +1,7 @@
+@import 'mixins';
+
 :host{
-  color: white;
+  color: var(--main-white);
   display: block;
   position: relative;
 }
@@ -17,11 +19,15 @@
     padding-bottom: 24vh;
 
     .title-element{
-      max-width: 86.9rem;
+
+      @include for-small-tablet-portrait {
+        flex-grow: 1;
+      }
 
       .title{
-        font-size: clamp(1.8rem, var(--grow-ratio) , 15.6rem );
+        font-size: var(--fs-xl);
         line-height: 0.8245em;
+        font-weight: 800;
       }
     }
   }
@@ -29,8 +35,8 @@
 }
 
 .banner-2{
-  background-color: white;
-  font-size: 25px;
-font-weight: 100;
+  background-color: var(--main-white);
+  line-height: var(--fs-800);
+  font-weight: 100;
   color: var(--main-black);
 }
