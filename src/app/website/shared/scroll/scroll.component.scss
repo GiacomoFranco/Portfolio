@@ -8,20 +8,18 @@
   transform: translate(0, -50%);
   right: -0.65em;
   z-index: var(--z-index-fixed-elements);
-  font-size: clamp(25rem, 25.4vw, 39.8rem);
+  font-size: clamp(20rem, 19.4vw, 39.8rem);
 
 
   @include for-tablet-portrait {
-    top: inherit;
-    right: inherit;
-    bottom: -0.65em;
-    left: 50%;
-    transform: translate(-50%, 0) rotate(90deg);
+    display: none;
   }
 
 }
 
 .scroll {
+  max-width: 7rem, var(--grow-ratio), 22rem;
+  max-height: 7rem, var(--grow-ratio), 22rem;
 
   .outside-path {
     display: flex;
