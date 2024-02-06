@@ -33,15 +33,12 @@ export class ScrollRevealDirective implements AfterViewInit {
   animation() {
     const text = new SplitType('#bannerTitle', { types: 'lines' });
 
-    console.log('aaaaaaa');
-    console.log(text.lines);
-
       const tl = gsap.timeline();
       gsap.from(text.lines,
         {
           opacity: 0,
           duration: 1.5,
-          x: 150,
+          y: 50,
           delay: 1,
           ease: 'power4.out',
           skewX: 3,
