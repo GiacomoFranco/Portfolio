@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ScrollComponent } from './shared/scroll/scroll.component';
-import { AsideComponent } from './shared/aside/aside.component';
+import { ScrollComponent } from './components/scroll/scroll.component';
+import { AsideComponent } from './components/aside/aside.component';
 
 
 @Component({
