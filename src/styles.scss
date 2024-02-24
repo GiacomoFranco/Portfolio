@@ -19,6 +19,7 @@
   --main-gray: #9C9C9C;
   --main-white-opacity: #ffffffdc;
   --main-black-opacity: #000000f2;
+  --secondary-black-opacity:rgba(0, 0, 0, 0.637)2;
 
   --fs-xl: clamp(9.8rem, var(--grow-ratio), 14.6rem);
   --fs-900: clamp(1.8rem, var(--grow-ratio), 10.4rem);
@@ -86,7 +87,7 @@ h3 {
 p, pre{
   font-size: var(--fs-400);
   font-weight: 200;
-  line-height: 1.43em;
+  line-height: 1.2em;
 }
 
 .section-container {
@@ -106,6 +107,15 @@ p, pre{
   }
 }
 
+::selection {
+  background: var(--main-black-opacity);
+  color: var(--main-white) !important;
+}
+
+img::selection {
+  background: var(--secondary-black-opacity);
+}
+
 .white-element::selection,
 .white-element br::selection,
 .white-element div::selection,
@@ -115,13 +125,6 @@ p, pre{
   color: var(--main-black) !important;
 }
 
-.black-element::selection,
-.black-element br::selection,
-.black-element div::selection,
-.black-element div span::selection {
-  background: var(--main-black-opacity);
-  color: var(--main-white) !important;
-}
 
 @supports not (-webkit-text-stroke: var(--main-green)) {
   .green-outline {
