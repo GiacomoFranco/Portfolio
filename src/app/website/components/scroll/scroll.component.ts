@@ -9,7 +9,16 @@ import { gsap } from 'gsap';
   styleUrl: './scroll.component.scss',
 })
 export class ScrollComponent {
-  ngOnInit(): void {
+  scrollFirstLoadAnim() {
+    gsap.from('#scroll-component', {
+      delay: 1,
+      duration: 1.5,
+      opacity: 0,
+      ease: 'power4.out',
+    });
+  }
+
+  scrollEffectAnim() {
     gsap.to('#scrollbar', {
       transform: 'rotate(-100deg)',
       scrollTrigger: {
@@ -18,5 +27,10 @@ export class ScrollComponent {
         start: 'top top',
       },
     });
+  }
+
+  ngOnInit(): void {
+    this.scrollFirstLoadAnim();
+    this.scrollEffectAnim();
   }
 }

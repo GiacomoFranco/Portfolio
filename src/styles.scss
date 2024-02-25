@@ -19,14 +19,15 @@
   --main-gray: #9C9C9C;
   --main-white-opacity: #ffffffdc;
   --main-black-opacity: #000000f2;
+  --secondary-black-opacity:rgba(0, 0, 0, 0.637)2;
 
   --fs-xl: clamp(9.8rem, var(--grow-ratio), 14.6rem);
   --fs-900: clamp(1.8rem, var(--grow-ratio), 10.4rem);
-  --fs-800: clamp(1.8rem, var(--grow-ratio), 8.2rem);
+  --fs-800: clamp(4.8rem, 5.3vw, 8.2rem);
   --fs-700: clamp(1.8rem, var(--grow-ratio), 7.2rem);
   --fs-600: clamp(1.8rem, var(--grow-ratio), 5.4rem);
-  --fs-500: clamp(1.8rem, var(--grow-ratio), 5rem);
-  --fs-400: clamp(1.8rem, var(--grow-ratio), 2.2rem);
+  --fs-500: clamp(4.7rem, 3.1vw, 5rem);
+  --fs-400: clamp(1.7rem, 1.2vw , 2.2rem);
   --fs-300: clamp(1.8rem, var(--grow-ratio), 1.8rem);
   --fs-200: clamp(1.8rem, var(--grow-ratio), 3.1rem);
   --fs-100: clamp(1.8rem, var(--grow-ratio), 1.5rem);
@@ -34,6 +35,17 @@
   @include for-small-tablet-portrait {
     --grow-ratio: 13vw;
     --fs-xl: clamp(4.8rem, var(--grow-ratio), 8.6rem);
+  }
+
+  @include for-tablet-portrait {
+    --fs-800: clamp(3.8rem, 11.3vw, 8.2rem);
+  }
+
+
+
+  @include for-phone-only {
+    --fs-500: clamp(3.7rem, 3.1vw, 5rem);
+    --fs-400: clamp(1.7rem, 1.2vw, 2.2rem);
   }
 }
 
@@ -72,10 +84,10 @@ h3 {
   line-height: 1em;
 }
 
-p {
+p, pre{
   font-size: var(--fs-400);
   font-weight: 200;
-  line-height: 1.43em;
+  line-height: 1.2em;
 }
 
 .section-container {
@@ -95,6 +107,15 @@ p {
   }
 }
 
+::selection {
+  background: var(--main-black-opacity);
+  color: var(--main-white) !important;
+}
+
+img::selection {
+  background: var(--secondary-black-opacity);
+}
+
 .white-element::selection,
 .white-element br::selection,
 .white-element div::selection,
@@ -104,13 +125,6 @@ p {
   color: var(--main-black) !important;
 }
 
-.black-element::selection,
-.black-element br::selection,
-.black-element div::selection,
-.black-element div span::selection {
-  background: var(--main-black-opacity);
-  color: var(--main-white) !important;
-}
 
 @supports not (-webkit-text-stroke: var(--main-green)) {
   .green-outline {
@@ -123,6 +137,7 @@ p {
 
     &::selection {
       color: var(--main-green);
+      background: var(--main-white-opacity);
       text-shadow:
         .1rem .1rem 0 var(--main-black),
         -.1rem .1rem 0 var(--main-black),
@@ -141,6 +156,7 @@ p {
 
     &::selection {
       color: var(--main-black);
+      background: var(--main-black-opacity);
       text-shadow:
         .1rem .1rem 0 var(--main-white),
         -.1rem .1rem 0 var(--main-white),
@@ -159,6 +175,7 @@ p {
 
     &::selection {
       color: var(--main-white);
+      background: var(--main-white-opacity);
       text-shadow:
         .1rem .1rem 0 var(--main-black),
         -.1rem .1rem 0 var(--main-black),
@@ -184,7 +201,7 @@ p {
   -webkit-text-stroke: .1rem var(--main-black);
 
   &::selection {
-    background: var(--main-white-opacity);
+    background: var(--main-black-opacity);
     -webkit-text-stroke: .1rem var(--main-white);
   }
 }
@@ -194,7 +211,7 @@ p {
   -webkit-text-stroke: .1rem var(--main-white);
 
   &::selection {
-    background: var(--main-black-opacity);
+    background: var(--main-white-opacity);
     -webkit-text-stroke: .1rem var(--main-black);
   }
 }
