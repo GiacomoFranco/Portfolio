@@ -58,7 +58,7 @@
   width: 100vw;
   justify-content: center;
   align-items: center;
-  padding: 18.9rem 0 18.9rem 0;
+  padding: 18.9rem 0 9.8rem 0;
 
   .content {
     flex-direction: column;
@@ -92,7 +92,7 @@
         .shape {
           position: relative;
           border-radius: 45.3%/57.5% 0 0 0;
-          border: .1rem solid var(--main-gray);
+          border: .1rem solid var(--light-gray);
           aspect-ratio: 50.7 / 40;
           max-width: 45.7rem;
           width: 100%;
@@ -180,27 +180,105 @@
   width: 100vw;
   justify-content: center;
   align-items: center;
-  padding: 18.9rem 0 18.9rem 0;
+  padding: 9.8rem 0 9.8rem 0;
 
   .content {
     gap: 7.2%;
 
-    .phone-element{
+    .phone-element {
+      max-height: 66.044rem;
       flex-shrink: 0;
-      flex-basis: 40%;
+      flex-basis: 35%;
       background-color: var(--main-black);
-      border-radius: 5.92%;
-
+      border-radius: 3.6rem;
       aspect-ratio: 561 / 696;
-
     }
 
     .info-element {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       flex-grow: 1;
+      gap: 6rem;
 
       .text-element {
         .title {
           margin-bottom: 5rem;
+        }
+      }
+
+      .cards-element {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+
+        .feature-card {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          padding: 3rem;
+          flex-grow: 1;
+          flex-basis: 100%;
+          aspect-ratio: 279 / 200;
+          border: .1rem solid #d1d1d1;
+          border-radius: 7.96% / 9.56%;
+
+          p {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+
+  @include for-tablet-landscape {
+    .content {
+      gap: 5rem;
+      flex-direction: column-reverse;
+
+      .info-element {
+        gap: 3rem;
+
+        .text-element {
+          .title {
+            max-width: 80%;
+          }
+        }
+
+        .cards-element {
+          .feature-card {
+
+            aspect-ratio: 279 / 160;
+          }
+        }
+      }
+    }
+  }
+
+  @include for-small-tablet-portrait {
+    .content {
+      .info-element {
+        .text-element {
+          .title {
+            max-width: initial;
+          }
+        }
+      }
+    }
+  }
+
+  @include for-phone-only {
+    .content {
+      .info-element {
+        .cards-element {
+          flex-wrap: wrap;
+
+          .feature-card {
+            border-radius: 2rem;
+            aspect-ratio: initial;
+            height: 15rem;
+            align-items: center;
+          }
         }
       }
     }

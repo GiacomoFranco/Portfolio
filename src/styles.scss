@@ -16,16 +16,17 @@
   --main-black: #09090B;
   --main-green: #DCFF00;
   --main-white: #FFFFFF;
-  --main-gray: #9C9C9C;
+  --main-gray: #757575;
+  --light-gray: #9C9C9C;
   --main-white-opacity: #ffffffdc;
   --main-black-opacity: #000000f2;
-  --secondary-black-opacity:rgba(0, 0, 0, 0.637)2;
+  --secondary-black-opacity:rgb(0, 0, 0.637);
 
   --fs-xl: clamp(9.8rem, var(--grow-ratio), 14.6rem);
   --fs-900: clamp(1.8rem, var(--grow-ratio), 10.4rem);
-  --fs-800: clamp(4.8rem, 5.3vw, 8.2rem);
+  --fs-800: clamp(5.8rem, 5.3vw, 8.2rem);
   --fs-700: clamp(1.8rem, var(--grow-ratio), 7.2rem);
-  --fs-600: clamp(1.8rem, var(--grow-ratio), 5.4rem);
+  --fs-600: clamp(3.8rem, 5.3vw, 5.4rem);
   --fs-500: clamp(4.7rem, 3.1vw, 5rem);
   --fs-400: clamp(1.7rem, 1.2vw , 2.2rem);
   --fs-300: clamp(1.8rem, var(--grow-ratio), 1.8rem);
@@ -41,7 +42,9 @@
     --fs-800: clamp(3.8rem, 11.3vw, 8.2rem);
   }
 
-
+  @include for-small-tablet-portrait {
+    --fs-600: clamp(4.8rem, 5.3vw, 5.4rem);
+  }
 
   @include for-phone-only {
     --fs-500: clamp(3.7rem, 3.1vw, 5rem);
