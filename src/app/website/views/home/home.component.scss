@@ -70,7 +70,7 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
-      gap: 2rem;
+      gap: 2re3;
 
       .text-element {
         flex-grow: 1;
@@ -307,7 +307,7 @@
       max-height: 60.2rem;
       flex-basis: 30vw;
       flex-grow: 1;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
 
       .caracteristics-element {
         flex-grow: 1;
@@ -315,7 +315,43 @@
         gap: 1rem;
 
         .card {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 2rem;
+
           border-radius: 3.6rem;
+          padding: 3rem 3rem;
+
+          .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+
+            &__down {
+              justify-content: end;
+            }
+
+            img {
+              margin-bottom: 1rem;
+              width: 2.591rem;
+            }
+          }
+
+          .not-aviable-yet {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 1 / 1;
+            width: 3.5rem;
+            padding: 10px;
+            background-color: var(--main-black);
+            border-radius: 9999rem;
+
+            img {
+              scale: .8;
+            }
+          }
         }
 
         .caracteristic-card__featured {
@@ -327,7 +363,8 @@
         .caracteristic-card {
           flex-basis: 29.36%;
 
-          background-color: gray;
+          color: var(--main-white);
+          background-color: #A3A3A3;
         }
       }
 
