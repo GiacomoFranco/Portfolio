@@ -4,7 +4,6 @@ import { WebsiteComponent } from './website/website.component';
 
 export const routes: Routes = [
   {
-    title: 'website',
     path: '',
     component: WebsiteComponent,
     children: [{ path: '', component: HomeComponent }],
