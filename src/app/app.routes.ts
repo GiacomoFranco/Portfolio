@@ -7,6 +7,6 @@ export const routes: Routes = [
     title: 'website',
     path: '',
     component: WebsiteComponent,
-    children: [{ title: 'home', path: '', component: HomeComponent }],
+    children: [{ path: '', component: HomeComponent }],
   },
 ];
