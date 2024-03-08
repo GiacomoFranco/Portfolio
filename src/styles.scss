@@ -29,9 +29,10 @@
   --fs-700: clamp(1.8rem, var(--grow-ratio), 7.2rem);
   --fs-600: clamp(3.8rem, 5.3vw, 5.4rem);
   --fs-500: clamp(4.7rem, 3.1vw, 5rem);
+  --fs-450: clamp(1.7rem, 3.1vw, 4.5rem);
   --fs-400: clamp(1.7rem, 1.2vw , 2.2rem);
-  --fs-300: clamp(1.7rem, 1.2vw, 1.8rem);
-  --fs-200: clamp(1.8rem, var(--grow-ratio), 3.1rem);
+  --fs-300: clamp(1.8rem, var(--grow-ratio), 3.1rem);
+  --fs-200: clamp(1.7rem, 1.2vw, 1.8rem);
   --fs-100: clamp(1.8rem, var(--grow-ratio), 1.5rem);
 
   @include for-small-tablet-portrait {
@@ -89,7 +90,7 @@ h3 {
 }
 
 h4 {
-  font-size: var(--fs-200);
+  font-size: var(--fs-300);
   font-weight: 600;
   line-height: 1em;
 }
