@@ -78,22 +78,27 @@
           <div class="text-element">
             <h3 class="title">A developer who makes <span class="black-outline">adaptative Interfaces_</span></h3>
             <p class="text">
-              Prioritizing performance, accessibility and usability, I craft user-friendly interfaces that accommodate all users,
-              regardless of their device. My responsive design expertise showcases my commitment to adaptable, user-centric interfaces
+              Prioritizing performance, accessibility and usability, I craft user-friendly interfaces that accommodate
+              all users,
+              regardless of their device. My responsive design expertise showcases my commitment to adaptable,
+              user-centric interfaces
               in a multi-device era.
             </p>
           </div>
           <div class="cards-element">
             <div class="feature-card">
-              <img class="feature-icon" src="assets/images/responsive-icon.svg" alt="Responsiveness Icon" width="38.09px" height="36.44px">
+              <img class="feature-icon" src="assets/images/responsive-icon.svg" alt="Responsiveness Icon"
+                width="38.09px" height="36.44px">
               <p>Responsiveness</p>
             </div>
             <div class="feature-card">
-              <img class="feature-icon" src="assets/images/acces-icon.svg" alt="Responsiveness Icon" width="42.51px" height="42.54px">
+              <img class="feature-icon" src="assets/images/acces-icon.svg" alt="Responsiveness Icon" width="42.51px"
+                height="42.54px">
               <p>Accesibility</p>
             </div>
             <div class="feature-card">
-              <img class="feature-icon" src="assets/images/performance-icon.svg" alt="Responsiveness Icon" width="40.6px" height="37.24px">
+              <img class="feature-icon" src="assets/images/performance-icon.svg" alt="Responsiveness Icon"
+                width="40.6px" height="37.24px">
               <p>Performance</p>
             </div>
           </div>
@@ -106,7 +111,8 @@
     <article class="section-container">
       <div class="content">
         <div class="title-element">
-          <h3 class="title white-element">A developer who cares in creating <br> products that <span class="green-outline">genuinely serves the user_</span></h3>
+          <h3 class="title white-element">A developer who cares in creating <br> products that <span
+              class="green-outline">genuinely serves the user_</span></h3>
         </div>
         <div class="grid-element">
           <div class="caracteristics-element">
@@ -124,8 +130,8 @@
             </div>
             <div class="card caracteristic-card">
               <div class="card-content">
-                  <img src="/assets/images/testing-icon.svg" alt="Testing Icon">
-                  <h4>Testing and <br> analysis</h4>
+                <img src="/assets/images/testing-icon.svg" alt="Testing Icon">
+                <h4>Testing and <br> analysis</h4>
               </div>
               <div class="not-aviable-yet">
                 <img src="/assets/images/x.svg" alt="Not aviable yet">
@@ -152,6 +158,42 @@
               <img class="redirect-icon" src="/assets/images/go-to-section-icon.svg" alt="Go to section icon">
             </a>
           </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="projects">
+    <article class="section-container">
+      <div class="content">
+        <div class="title-element">
+          <h3 class="title white-element">There's a few examples of what can I do, <br> <span class="green-outline">a
+              glimpse of my work_</span></h3>
+        </div>
+        <div class="projects-element">
+          <div class="grid-element">
+            <div class="card project-card">
+              <div class="card-content">
+                <h4 class="project-title">Mine <br>Marketplace</h4>
+                <app-simple-button [buttonOptions]='projects.projectCards.button'/>
+              </div>
+            </div>
+            <div class="bottom-grid">
+              <div class="card project-card">
+                <div class="card-content">
+                  <h4 class="project-title">Mine <br>Marketplace</h4>
+                  <app-simple-button [buttonOptions]='projects.projectCards.button'/>
+                </div>
+              </div>
+              <div class="card project-card">
+                <div class="card-content">
+                  <h4 class="project-title">Mine <br>Marketplace</h4>
+                  <app-simple-button [buttonOptions]='projects.projectCards.button'/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <app-simple-button [buttonOptions]="projects.projectRedirect"/>
         </div>
       </div>
     </article>
