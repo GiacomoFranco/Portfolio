@@ -1,0 +1,88 @@
+@import 'mixins';
+
+.projects {
+  background-color: var(--main-black);
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  padding: 18.9rem 0 9.8rem 0;
+
+  .content {
+    flex-direction: column;
+    gap: 5rem;
+
+    .title-element {
+      color: var(--main-white);
+    }
+
+    .projects-element {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .grid-element {
+        display: flex;
+        flex-direction: column;
+        max-height: 69rem;
+        min-height: 59rem;
+        flex-basis: 34vw;
+        flex-grow: 1;
+        gap: 1rem;
+
+        .project-card {
+          display: flex;
+          flex-basis: 58.17%;
+          background-color: rgb(80, 110, 110);
+          border-radius: 3.6rem;
+          cursor: pointer;
+
+          .card-content {
+            display: flex;
+            flex-direction: column;
+            padding: 4rem;
+            flex-grow: 1;
+            gap: 1rem;
+            justify-content: end;
+            align-items: start;
+
+            .project-title {
+              font-size: var(--fs-450);
+              font-weight: 700;
+            }
+
+            app-simple-button {
+              align-self: unset;
+            }
+          }
+        }
+
+        .bottom-grid {
+          display: flex;
+          flex-grow: 1;
+          gap: 1rem;
+        }
+      }
+
+      app-simple-button {
+        align-self: flex-end;
+      }
+
+      @include for-tablet-portrait {
+        .grid-element {
+          max-height: initial;
+
+          .project-card {
+            flex-basis: initial;
+            flex-grow: 1;
+          }
+
+          .bottom-grid {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+
+    }
+  }
+}
