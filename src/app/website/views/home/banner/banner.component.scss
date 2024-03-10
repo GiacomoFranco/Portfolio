@@ -1,0 +1,30 @@
+@import 'mixins';
+
+.banner {
+  color: var(--main-white);
+  background-color: var(--main-black);
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    justify-content: start;
+    align-items: end;
+    padding-bottom: 24vh;
+
+    .title-element {
+
+      .title {
+        font-size: var(--fs-xl);
+        line-height: 0.8245em;
+        font-weight: 800;
+      }
+
+      @include for-small-tablet-portrait {
+        flex-grow: 1;
+      }
+    }
+  }
+
+}
