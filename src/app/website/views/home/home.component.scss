@@ -419,10 +419,11 @@
     }
 
     @include for-tablet-landscape {
+
       .grid-element {
         flex-direction: column;
         max-height: initial;
-        flex-basis: 54.2rem;
+        flex-basis: 60rem;
 
         .buttons-element {
           flex-direction: row;
@@ -437,13 +438,43 @@
       }
     }
 
-    @include for-tablet-landscape {
+    @include custom-breakpoint(1000) {
       .grid-element {
-        flex-basis: 45.2rem;
+        flex-basis: 50rem;
       }
     }
 
-    @include custom-breakpoint(800) {
+    @include for-tablet-portrait {
+
+      .grid-element {
+        flex-basis: 100rem;
+
+        .caracteristics-element {
+          flex-wrap: wrap;
+          flex-basis: 40rem;
+
+          .card:nth-child(1) {
+            flex-grow: 1;
+            flex-basis: 100%;
+          }
+          .card:nth-child(2) {
+            flex-grow: 1;
+            flex-basis: 40%;
+          }
+          .card:nth-child(3) {
+            flex-grow: 1;
+            flex-basis: 40%;
+          }
+        }
+
+        .buttons-element {
+          flex-direction: column;
+        }
+      }
+    }
+
+
+    @include custom-breakpoint(570) {
       .grid-element {
         flex-basis: initial;
 
@@ -452,14 +483,11 @@
           flex-basis: 40rem;
 
           .card {
-            flex-basis: inherit;
+            flex-basis: inherit !important;
+            flex-grow: inherit !important;
           }
         }
-      }
-    }
 
-    @include custom-breakpoint(800) {
-      .grid-element {
         .buttons-element {
           flex-direction: column;
         }
