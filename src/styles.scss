@@ -127,6 +127,10 @@ img::selection {
   background: var(--secondary-black-opacity);
 }
 
+.white-element {
+  color: var(--main-white);
+}
+
 .white-element::selection,
 .white-element br::selection,
 .white-element div::selection,
