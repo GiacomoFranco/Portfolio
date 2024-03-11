@@ -1,0 +1,135 @@
+footer {
+  display: flex;
+  background-color: var(--main-black);
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  padding: 18.9rem 0 9.8rem 0;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+
+    .info-element {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      .text-element {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        max-width: 55rem;
+
+        p {
+          color: var(--main-gray);
+          font-weight: 400;
+        }
+      }
+
+      .contact-element {
+        display: flex;
+        flex-direction: column;
+
+        a {
+          text-decoration: none;
+          font-size: var(--fs-200);
+          color: var(--main-green);
+          font-weight: 400;
+        }
+
+      }
+    }
+
+    .form-element {
+      flex-grow: 1;
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        .form-field {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 20px;
+
+          .input-container {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            input,
+            textarea {
+              outline: none;
+              min-height: 5.6rem;
+              background-color: transparent;
+              border: none;
+              border-bottom: .1rem solid var(--main-white);
+              font-size: var(--fs-200);
+              resize: none;
+
+              &:focus~label,
+              &:valid~label {
+                top: -1.3rem;
+                color: var(--main-green);
+                scale: .8;
+                transition: all .3s ease;
+              }
+
+              &:focus~.underline,
+              &:valid~.underline {
+                width: 100%;
+                transition: all .3s ease;
+              }
+
+            }
+
+            textarea {
+              padding-top: 1.5rem;
+            }
+
+            label {
+              transform-origin: top left;
+              position: absolute;
+              font-size: var(--fs-200);
+              pointer-events: none;
+              transition: all .3s ease;
+              top: 1.5rem;
+            }
+
+            .underline {
+              border-radius: 99rem;
+              position: absolute;
+              bottom: 0;
+              height: .2rem;
+              width: 0%;
+              background-color: var(--main-green);
+              transition: all .3s ease;
+            }
+
+
+          }
+
+          .form-error {
+            margin-top: .5rem;
+            transform-origin: top left;
+            font-size: var(--fs-200);
+            color: red;
+            scale: .8;
+          }
+        }
+
+        button {
+          background-color: var(--main-green);
+          border: none;
+          border-radius: 99rem;
+          padding: 1.5rem;
+          cursor: pointer;
+          width: 20rem;
+        }
+
+      }
+    }
+  }
+}
