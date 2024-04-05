@@ -21,7 +21,7 @@
   --dark-gray: #2E2E31;
   --main-white-opacity: #ffffffdc;
   --main-black-opacity: #000000f2;
-  --secondary-black-opacity:rgb(0, 0, 0.637);
+  --secondary-black-opacity: rgb(0, 0, 0.637);
 
   --fs-xl: clamp(9.8rem, var(--grow-ratio), 14.6rem);
   --fs-900: clamp(1.8rem, var(--grow-ratio), 10.4rem);
@@ -30,7 +30,7 @@
   --fs-600: clamp(3.8rem, 5.3vw, 5.4rem);
   --fs-500: clamp(4.7rem, 3.1vw, 5rem);
   --fs-450: clamp(1.7rem, 3.1vw, 4.5rem);
-  --fs-400: clamp(1.7rem, 1.2vw , 2.2rem);
+  --fs-400: clamp(1.7rem, 1.2vw, 2.2rem);
   --fs-300: clamp(2.5rem, 2.3vw, 3.1rem);
   --fs-200: clamp(1.7rem, 1.2vw, 1.8rem);
   --fs-100: clamp(1.8rem, var(--grow-ratio), 1.5rem);
@@ -95,7 +95,8 @@ h4 {
   line-height: 1em;
 }
 
-p, pre{
+p,
+pre {
   font-size: var(--fs-400);
   font-weight: 200;
   line-height: 1.2em;
@@ -107,8 +108,8 @@ p, pre{
   flex-grow: 1;
   margin: 0 clamp(7rem, var(--grow-ratio), 22rem);
 
-  @include for-small-tablet-portrait{
-    margin:0 1.8rem;
+  @include for-small-tablet-portrait {
+    margin: 0 1.8rem;
   }
 
   .content {
@@ -138,6 +139,11 @@ img::selection {
 
   background: var(--main-white-opacity);
   color: var(--main-black) !important;
+}
+
+.arrow-icon {
+  aspect-ratio: 1 / 0.8;
+  height: .885rem;
 }
 
 
@@ -206,8 +212,8 @@ img::selection {
   -webkit-text-stroke: .1rem var(--main-green);
 
   &::selection {
-  background: var(--main-white-opacity);
-  -webkit-text-stroke: .1rem var(--main-black);
+    background: var(--main-white-opacity);
+    -webkit-text-stroke: .1rem var(--main-black);
   }
 }
 
