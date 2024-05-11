@@ -17,7 +17,7 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
-      gap: 2re3;
+      gap: 3rem;
 
       .text-element {
         flex-grow: 1;
@@ -48,7 +48,9 @@
           .developer {
             position: absolute;
             bottom: 0;
-            width: 100%;
+            left: 50%;
+            transform: translate(-50% , 0);
+            width: 90%;
           }
         }
       }
