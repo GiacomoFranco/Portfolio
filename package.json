@@ -20,6 +20,7 @@
     "@angular/router": "^17.0.0",
     "@angular/service-worker": "^17.0.0",
     "gsap": "^3.12.4",
+    "ng-recaptcha": "^13.2.1",
     "rxjs": "~7.8.0",
     "split-type": "^0.3.4",
     "tslib": "^2.3.0",
