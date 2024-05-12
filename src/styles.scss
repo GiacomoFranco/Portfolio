@@ -146,6 +146,11 @@ img::selection {
   height: .885rem;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 0s 600000s, color 0s 600000s !important;
+  appearance: initial;
+}
 
 @supports not (-webkit-text-stroke: var(--main-green)) {
   .green-outline {
