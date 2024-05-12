@@ -8,8 +8,8 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
   template: `
     <div class="form-field">
       <div class="input-container">
-        <input [type]="type" [id]="fieldID" [formControl]="control" required />
-        <label [for]="fieldID">{{ label }}</label>
+        <input [type]="type" [id]="fieldID" [formControl]="control" required class="white-element"/>
+        <label [for]="fieldID" class="white-element">{{ label }}</label>
         <div class="underline"></div>
       </div>
       <ng-content select="[error]"></ng-content>

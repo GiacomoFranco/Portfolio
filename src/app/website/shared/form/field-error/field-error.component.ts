@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <span class="form-error" [hidden]="!validation"><img src="/assets/icons/exclamacion.svg" alt="">{{ alert }}</span>
+    <span  [hidden]="!validation" class="form-error white-element"><img src="/assets/icons/exclamacion.svg" alt="" />{{ alert }}</span>
   `,
   styleUrl: './field-error.component.scss',
 })

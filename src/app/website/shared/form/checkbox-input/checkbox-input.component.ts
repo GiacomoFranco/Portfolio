@@ -9,7 +9,7 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
     <div class="privacy-policy-field">
       <div class="input-container">
         <input type="checkbox" id="privacy-policy" [formControl]="control" required/>
-        <label for="privacy-policy">Aceptar <a href="">Políticas de privacidad</a></label>
+        <label for="privacy-policy" class="white-element">Accept <a href="" class="white-element">Privacy policy</a></label>
       </div>
       <ng-content select="[error]"></ng-content>
     </div>

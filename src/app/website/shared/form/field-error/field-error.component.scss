@@ -1,11 +1,13 @@
 .form-error {
   margin-top: .5rem;
   transform-origin: top left;
-  color: var(--light-brown);
+  opacity: .5;
+  color: var(--main-green);
   scale: .8;
   display: flex;
   gap: 1rem;
   max-width: 40rem;
+  font-size: var(--fs-200);
 
   &[hidden] {
     display: none !important;

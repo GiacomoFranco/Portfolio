@@ -15,15 +15,16 @@
       min-height: 5.6rem;
       background-color: transparent;
       border: none;
-      border-bottom: .15rem solid var(--light-green-outline);
+      border-bottom: .15rem solid var(--main-white);
       resize: none;
       color: var(--main-white);
+      font-size: var(--fs-200);
 
       &:focus~label,
       &:valid~label {
         opacity: 1;
         top: -1.3rem;
-        color: var(--light-green);
+        color: var(--main-green);
         scale: .8;
         transition: all .3s ease;
       }
@@ -43,6 +44,7 @@
       pointer-events: none;
       transition: all .3s ease;
       top: 1.5rem;
+      font-size: var(--fs-200);
     }
 
     .underline {
@@ -51,7 +53,7 @@
       bottom: 0;
       height: .2rem;
       width: 0%;
-      background-color: var(--light-green);
+      background-color: var(--main-green);
       transition: all .3s ease;
     }
   }

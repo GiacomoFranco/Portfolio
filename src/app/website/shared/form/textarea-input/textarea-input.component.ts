@@ -8,8 +8,8 @@ import { FormControl, ReactiveFormsModule} from '@angular/forms';
   imports: [ReactiveFormsModule],
   template: `
     <div class="input-container">
-      <textarea name="" id="" cols="30" rows="1" id="contact-message" [formControl]="control" required ></textarea>
-      <label for="contact-message">Escribe tu pregunta acá</label>
+      <textarea name="" id="" cols="30" rows="4" id="contact-message" [formControl]="control" required class="white-element" ></textarea>
+      <label for="contact-message" class="white-element">Message</label>
       <div class="underline"></div>
     </div>
     <ng-content select="[error]"></ng-content>

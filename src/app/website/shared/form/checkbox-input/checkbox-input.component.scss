@@ -14,11 +14,11 @@
     label {
       user-select: none;
       cursor: pointer;
+      font-size: var(--fs-200);
 
       a {
         font-weight: 500;
-        color: var(--light-green);
-        font-size: 1.7rem;
+        color: var(--main-green);
         margin-left: .6rem;
       }
     }
@@ -43,7 +43,7 @@
 
     input:checked+label {
       &::before {
-        background-color: var(--light-green);
+        background-color: var(--main-green);
         background-image: url('src/assets/icons/check.svg');
         background-repeat: no-repeat;
         background-position: center;

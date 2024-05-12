@@ -1,3 +1,5 @@
+@import 'mixins';
+
 footer {
   display: flex;
   background-color: var(--main-black);
@@ -9,18 +11,39 @@ footer {
   .content {
     display: flex;
     justify-content: space-between;
-    gap: 10rem;
+    gap: 7rem 10rem;
+
+    @include custom-breakpoint(1400) {
+      gap: 7rem 5rem;
+    }
+
+    @include for-tablet-landscape {
+      flex-direction: column;
+    }
 
     .info-element {
       display: flex;
       flex-direction: column;
       gap: 3rem;
+      flex-basis: 49rem;
+
+      @include for-tablet-landscape {
+        flex-basis: initial;
+
+        .text-element {
+          max-width: 54rem;
+        }
+      }
 
       .text-element {
         display: flex;
         flex-direction: column;
         gap: 4rem;
         max-width: 55rem;
+
+        @include for-tablet-landscape {
+          max-width: 50rem;
+        }
 
         p {
           color: var(--light-gray);
@@ -44,6 +67,11 @@ footer {
 
     .form-element {
       flex-grow: 1;
+      max-width: 85rem;
+
+      @include for-tablet-landscape {
+        max-width: initial;
+      }
 
       form {
         display: flex;

@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-      <button>{{ text }} <img class="arrow-icon" src="/assets/icons/redirection-arrow-black.svg" alt="ícono enviar pregunta"></button>
+      <button>{{ text }} <img class="arrow-icon" src="/assets/images/go-to-section-icon-black.svg" alt="ícono enviar"></button>
   `,
   styleUrl: './submit-button.component.scss'
 })
