@@ -7,28 +7,13 @@
       </div>
       <div class="projects-element">
         <div class="grid-element">
-          <div class="card project-card">
-            <div class="card-content">
-              <h4 class="project-title">Mine <br>Marketplace</h4>
-              <app-simple-button [buttonOptions]='projects.projectCards.button' />
-            </div>
-          </div>
+          <app-project-card [project]="projects[0]" />
           <div class="bottom-grid">
-            <div class="card project-card">
-              <div class="card-content">
-                <h4 class="project-title">Mine <br>Marketplace</h4>
-                <app-simple-button [buttonOptions]='projects.projectCards.button' />
-              </div>
-            </div>
-            <div class="card project-card">
-              <div class="card-content">
-                <h4 class="project-title">Mine <br>Marketplace</h4>
-                <app-simple-button [buttonOptions]='projects.projectCards.button' />
-              </div>
-            </div>
+            <app-project-card [project]="projects[1]" />
+            <app-project-card [project]="projects[2]" />
           </div>
         </div>
-        <app-simple-button [buttonOptions]="projects.projectRedirect" />
+        <app-simple-button [buttonOptions]="projectRedirect" />
       </div>
     </div>
   </article>

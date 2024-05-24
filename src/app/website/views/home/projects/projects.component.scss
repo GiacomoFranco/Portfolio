@@ -25,33 +25,6 @@
         flex-grow: 1;
         gap: 1rem;
 
-        .project-card {
-          display: flex;
-          flex-basis: 58.17%;
-          background-color: rgb(80, 110, 110);
-          border-radius: 3.6rem;
-          cursor: pointer;
-
-          .card-content {
-            display: flex;
-            flex-direction: column;
-            padding: 4rem;
-            flex-grow: 1;
-            gap: 1rem;
-            justify-content: end;
-            align-items: start;
-
-            .project-title {
-              font-size: var(--fs-450);
-              font-weight: 700;
-            }
-
-            app-simple-button {
-              align-self: unset;
-            }
-          }
-        }
-
         .bottom-grid {
           display: flex;
           flex-grow: 1;

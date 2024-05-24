@@ -1,26 +1,41 @@
 import { Component } from '@angular/core';
 import { SimpleButtonComponent } from '@app/website/shared/simple-button/simple-button.component';
+import { ProjectCardComponent } from './project-card/project-card.component';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [SimpleButtonComponent],
+  imports: [ProjectCardComponent, SimpleButtonComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
-
-  projects = {
-    projectCards: {
+  projects = [
+    {
+      title: 'Control Legal',
+      button: {
+        title: 'View More',
+        redirectsTo: '#',
+      }
+    },
+    {
+      title: 'Sinapsis Website',
+      button: {
+        title: 'View More',
+        redirectsTo: '#',
+      }
+    },
+    {
       title: 'Mine Marketplace',
       button: {
         title: 'View More',
         redirectsTo: '#',
-      },
+      }
     },
-    projectRedirect: {
-      title: 'Do you want to see more projects?',
-      redirectsTo: '#',
-    },
+  ];
+
+  projectRedirect = {
+    title: 'Do you want to see more projects?',
+    redirectsTo: '#',
   };
 }
