@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SimpleButtonComponent } from '@app/website/shared/simple-button/simple-button.component';
@@ -5,9 +6,9 @@ import { SimpleButtonComponent } from '@app/website/shared/simple-button/simple-
 @Component({
   selector: 'app-project-card',
   standalone: true,
-  imports: [SimpleButtonComponent],
+  imports: [CommonModule, SimpleButtonComponent],
   template: `
-    <a [href]="project.button.redirectsTo" target="_blank" class="card-content">
+    <a [href]="project.button.redirectsTo" target="_blank" class="card-content" [ngStyle]="{backgroundImage:  'url(' +  project.image + ')'}">
       <h4 class="project-title">{{ project.title }}</h4>
       <app-simple-button [buttonOptions]="project.button" />
     </a>
