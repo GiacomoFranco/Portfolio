@@ -15,22 +15,22 @@ export class ProjectsComponent {
       title: 'Control Legal',
       button: {
         title: 'View More',
-        redirectsTo: '#',
-      }
+        redirectsTo: 'https://controllegal.netlify.app/',
+      },
     },
     {
       title: 'Sinapsis Website',
       button: {
         title: 'View More',
-        redirectsTo: '#',
-      }
+        redirectsTo: 'https://sinapsis.global/home',
+      },
     },
     {
       title: 'Mine Marketplace',
       button: {
         title: 'View More',
         redirectsTo: '#',
-      }
+      },
     },
   ];
 
