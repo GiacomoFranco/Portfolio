@@ -17,6 +17,16 @@
       background-color: var(--main-black);
       border-radius: 3.6rem;
       aspect-ratio: 561 / 696;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        height: 115%;
+      }
     }
 
     .info-element {
