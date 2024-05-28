@@ -30,10 +30,11 @@ export class FormComponent {
   errorReponse: string | number;
 
   constructor(
-    //private mailService: MailSenderService,
+    private mailService: MailSenderService,
     private dialogService: DialogService,
-    //private recaptchaV3Service: ReCaptchaV3Service
-  ) {
+    private recaptchaV3Service: ReCaptchaV3Service
+    )
+  {
     this.listenDialogState = this.dialogService.dialogOpen$.subscribe(
       (state) => {
         this.dialogState = state;
@@ -44,24 +45,24 @@ export class FormComponent {
   sendMail() {
     this.form.markAllAsTouched();
 
-    // if (this.form.valid) {
-    //   this.recaptchaV3Service.execute('importantAction').subscribe((token) => {
-    //     if (token) {
-    //       this.mailService.sendQuestion(this.form.value).subscribe(
-    //         () => {
-    //           this.dialogService.openDialog();
-    //         },
-    //         (err: HttpErrorResponse) => {
-    //           this.errorReponse = err.status;
-    //           this.dialogService.openDialog();
-    //         }
-    //       );
-    //     } else {
-    //       this.errorReponse = 'ReCaptcha';
-    //       this.dialogService.openDialog();
-    //     }
-    //   });
-    // }
+    if (this.form.valid) {
+      this.recaptchaV3Service.execute('importantAction').subscribe((token) => {
+        if (token) {
+          this.mailService.sendMessage(this.form.value).subscribe(
+            () => {
+              this.dialogService.openDialog();
+            },
+            (err: HttpErrorResponse) => {
+              this.errorReponse = err.status;
+              this.dialogService.openDialog();
+            }
+          );
+        } else {
+          this.errorReponse = 'ReCaptcha';
+          this.dialogService.openDialog();
+        }
+      });
+    }
   }
 
   ngOnDestroy() {

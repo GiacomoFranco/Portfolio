@@ -18,13 +18,7 @@ export class FooterComponent {
   public form: FormGroup = new FormGroup({
     name: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
-    phone: new FormControl('', [
-      Validators.required,
-      Validators.pattern('[0-9]*'),
-      Validators.min(1234567890),
-      Validators.max(12345678901),
-    ]),
-    question: new FormControl('', Validators.required),
+    message: new FormControl('', Validators.required),
     terms: new FormControl(false, [Validators.requiredTrue]),
   });
 
@@ -36,8 +30,8 @@ export class FooterComponent {
     return this.form.get('email') as FormControl;
   }
 
-  get question(): FormControl {
-    return this.form.get('question') as FormControl;
+  get message(): FormControl {
+    return this.form.get('message') as FormControl;
   }
 
   get terms(): FormControl {
