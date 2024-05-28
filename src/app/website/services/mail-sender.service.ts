@@ -6,8 +6,8 @@ import { BrevoBody, BrevoTemplateParameters } from '../interfaces/mail.interface
   providedIn: 'root',
 })
 export class MailSenderService {
-  private readonly API_URL: string = 'https://api.brevo.com/v3/smtp/email';
-  private readonly BREVO__APIKEY: string = '';
+  private readonly API_URL: string = import.meta.env['NG_BREVO_API_URL'];
+  private readonly BREVO__APIKEY: string = import.meta.env['NG_BREVO_API_URL'];
   brevoHeaders = {
     'api-key': this.BREVO__APIKEY,
     'Content-Type': 'application/json',
