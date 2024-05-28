@@ -26,9 +26,9 @@ export class MailSenderService {
     };
 
     this.body = {
-      sender: { name: 'Francoder_', email: 'passiflora.freelance@gmail.com' },
+      sender: { name: 'Francoder', email: 'passiflora.freelance@gmail.com' },
       to: [{ email: 'passiflora.freelance@gmail.com', name: 'Santiago' }],
-      subject: `🧙🏻‍♂️ ✨ | Francoder_, ${message.name} nos ha enviado un nuevo mensaje desde nuestro portafolio`,
+      subject: `🧙🏻‍♂️ ✨ | Francoder, ${message.name} nos ha enviado un nuevo mensaje desde nuestro portafolio`,
       templateId: 4,
       params: this.params,
     };
