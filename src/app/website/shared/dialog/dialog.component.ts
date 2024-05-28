@@ -9,24 +9,21 @@ import { DialogService } from '@app/website/services/dialog.service';
     <div class="section-container">
       <span
         class="dialog"
-        [style.backgroundColor]="
-          error ? 'var(--light-brown)' : 'var(--mint-green)'
-        "
+        [style.backgroundColor]="error ? '#fe9e9e' : 'var(--main-green)'"
       >
         @if (error) {
         <div class="message">
           <img src="/assets/icons/error-alert.svg" alt="Alerta de error" />
           <p>
-            Presentamos un error al enviar el mensaje, contacta al
-            administrador e informale sobre el error <b>{{ error }}</b>
+            El sitio presentó un error al enviar el mensaje, contáctame
+            e informame sobre el error <b>{{ error }}</b>
           </p>
         </div>
         } @else {
         <div class="message">
           <img src="/assets/icons/check-alert.svg" alt="Correo enviado" />
           <p>
-            Tu mensaje se ha enviado con éxito, pronto nos comunicaremos
-            contigo
+            Tu mensaje se ha enviado con éxito, pronto nos comunicaremos contigo
           </p>
         </div>
         }
