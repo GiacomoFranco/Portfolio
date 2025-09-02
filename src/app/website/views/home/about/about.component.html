@@ -3,36 +3,39 @@
     <div class="content">
       <div class="overview-element">
         <div class="text-element">
-          <h2 class="title">I'm a Frontend <span class="black-outline">Developer_</span></h2>
-          <p class="text">
-            I'm a <b>highly skilled frontend developer</b> who's truly passionate about coding and continuous
-            learning.
-            <br><br>
-            <b>My focus is on creating captivating user interfaces and enhancing user experiences.</b> In this
-            ever-evolving field, I'm a
-            catalyst for progress, pushing boundaries to deliver the best results 💪🏻🤗.
-          </p>
+          <h2 class="title" scrollReveal>I'm a Frontend <span class="black-outline">Developer_</span></h2>
+          <div>
+            <p class="text-m2" scrollReveal>
+              I'm a <b>highly skilled frontend developer</b> who's truly passionate about coding and continuous
+              learning.
+            </p>
+            <p scrollReveal>
+              <b>My focus is on creating captivating user interfaces and enhancing user experiences.</b> In this
+              ever-evolving field, I'm a
+              catalyst for progress, pushing boundaries to deliver the best results 💪🏻🤗.
+            </p>
+          </div>
         </div>
         <div class="developer-element">
-          <div class="shape">
+          <div class="shape" scrollReveal [delay]=".2">
             <img src="/assets/images/francoder.png" alt="Francoder" class="developer">
           </div>
         </div>
       </div>
       <div class="metrics-element">
-        <div class="metric">
-          <h4 class="metric-counter">+15 <span>projects</span></h4>
-          <p class="metric-text">I've been working around 15 Projects in which I had the opportunity of
+        <div class="metric" scrollReveal>
+          <h4 class="metric-counter"><span>+<span counterUp>18</span></span> projects</h4>
+          <p class="metric-text">I've been working around 18 Projects in which I had the opportunity of
             develop and apply my skills in a profesional field.</p>
         </div>
-        <div class="metric">
-          <h4 class="metric-counter">+5 <span>years</span></h4>
+        <div class="metric" scrollReveal [delay]=".1">
+          <h4 class="metric-counter"><span>+<span counterUp [delay]=".1">5</span></span> years</h4>
           <p class="metric-text">More than 5 years creating user experience and eye catching interfaces
             from design to development</p>
         </div>
-        <div class="metric">
-          <h4 class="metric-counter">+2 <span>companys</span></h4>
-          <p class="metric-text">I have applied value to 2 Companys
+        <div class="metric" scrollReveal [delay]=".2">
+          <h4 class="metric-counter"><span>+<span counterUp [delay]=".2">3</span></span> companys</h4>
+          <p class="metric-text">I have applied value to 3 Companys
             who witnessed my commitment</p>
         </div>
       </div>

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { SimpleButtonComponent } from '@app/website/shared/simple-button/simple-button.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
+import { ScrollRevealDirective } from '@app/website/shared/directives/scroll-reveal.directive';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [ProjectCardComponent, SimpleButtonComponent],
+  imports: [ProjectCardComponent, SimpleButtonComponent, ScrollRevealDirective],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })

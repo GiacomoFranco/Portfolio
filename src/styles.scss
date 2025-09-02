@@ -102,6 +102,14 @@ pre {
   line-height: 1.2em;
 }
 
+.text-m{
+  margin-bottom: 1.33rem;
+}
+
+.text-m2 {
+  margin-bottom: 2.66rem;
+}
+
 .section-container {
   max-width: var(--max-width);
   height: 100%;
@@ -150,6 +158,14 @@ input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 0s 600000s, color 0s 600000s !important;
   appearance: initial;
+}
+
+.line {
+  overflow: hidden;
+  font-kerning: none;
+  line-height: inherit;
+  padding-bottom: .8rem;
+  margin-bottom: -.8rem;
 }
 
 @supports not (-webkit-text-stroke: var(--main-green)) {

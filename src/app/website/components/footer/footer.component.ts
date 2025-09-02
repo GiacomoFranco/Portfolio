@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ScrollRevealDirective } from '@app/website/shared/directives/scroll-reveal.directive';
 import { CheckboxInputComponent } from '@app/website/shared/form/checkbox-input/checkbox-input.component';
 import { FieldErrorComponent } from '@app/website/shared/form/field-error/field-error.component';
 import { FormComponent } from '@app/website/shared/form/form.component';
@@ -10,7 +11,7 @@ import { TextareaInputComponent } from '@app/website/shared/form/textarea-input/
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [FormComponent, TextInputComponent, TextareaInputComponent, CheckboxInputComponent, FieldErrorComponent, SubmitButtonComponent],
+  imports: [FormComponent, TextInputComponent, TextareaInputComponent, CheckboxInputComponent, FieldErrorComponent, SubmitButtonComponent, ScrollRevealDirective],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
