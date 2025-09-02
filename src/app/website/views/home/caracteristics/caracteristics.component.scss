@@ -240,19 +240,14 @@
           flex-wrap: wrap;
           flex-basis: 40rem;
 
-          .card:nth-child(1) {
-            flex-grow: 1;
-            flex-basis: 100%;
-          }
-
-          .card:nth-child(2) {
+          .card {
             flex-grow: 1;
             flex-basis: 40%;
-          }
 
-          .card:nth-child(3) {
-            flex-grow: 1;
-            flex-basis: 40%;
+            &.caracteristic-card__featured {
+              flex-grow: 1;
+              flex-basis: 100%;
+            }
           }
         }
 
@@ -270,11 +265,12 @@
 
         .caracteristics-element {
           flex-direction: column;
-          flex-basis: 40rem;
+          flex-basis: 122rem;
+          flex-wrap: nowrap;
 
           .card {
-            flex-basis: inherit !important;
-            flex-grow: inherit !important;
+            flex-basis: 0 !important;
+            flex-grow: 1 !important;
           }
         }
 
