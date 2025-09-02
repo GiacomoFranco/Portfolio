@@ -266,6 +266,7 @@
     @include custom-breakpoint(570) {
       .grid-element {
         flex-basis: initial;
+        flex-direction: column;
 
         .caracteristics-element {
           flex-direction: column;
