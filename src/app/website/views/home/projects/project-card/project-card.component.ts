@@ -8,7 +8,15 @@ import { SimpleButtonComponent } from '@app/website/shared/simple-button/simple-
   standalone: true,
   imports: [CommonModule, SimpleButtonComponent],
   template: `
-    <a [href]="project.button.redirectsTo" target="_blank" class="card-content" [ngStyle]="{backgroundImage:  'url(' +  project.image + ')'}">
+    <a
+      [href]="project.button.redirectsTo"
+      target="_blank"
+      class="card-content"
+      [ngStyle]="{
+        backgroundImage: 'url(' + project.image.url + ')',
+        backgroundPosition: project.image.position
+      }"
+    >
       <h4 class="project-title">{{ project.title }}</h4>
       <app-simple-button [buttonOptions]="project.button" />
     </a>

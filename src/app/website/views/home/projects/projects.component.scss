@@ -19,10 +19,6 @@
       .grid-element {
         display: flex;
         flex-direction: column;
-        max-height: 140rem;
-        min-height: 59rem;
-        flex-basis: 65vw;
-        flex-grow: 1;
         gap: 3rem;
 
         .bottom-grid {

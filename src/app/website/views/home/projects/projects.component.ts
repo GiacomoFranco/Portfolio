@@ -13,27 +13,27 @@ export class ProjectsComponent {
   projects = [
     {
       title: 'Control Legal',
-      image: '/assets/images/control-legal.webp',
+      image: {url: '/assets/images/control-legal.webp', position: 'top left'},
       button: {
         title: 'View More',
         redirectsTo: 'https://controllegal.netlify.app/',
       },
     },
     {
-      image: '/assets/images/sinapsis.webp',
+      image: {url: '/assets/images/sinapsis.webp', position: 'top center'},
       title: 'Sinapsis Website',
       button: {
         title: 'View More',
         redirectsTo: 'https://sinapsis.global/home',
       },
     },
-    {
-      title: 'Mine Marketplace',
-      button: {
-        title: 'View More',
-        redirectsTo: '#',
-      },
-    },
+    // {
+    //   title: 'Mine Marketplace',
+    //   button: {
+    //     title: 'View More',
+    //     redirectsTo: '#',
+    //   },
+    // },
   ];
 
   projectRedirect = {

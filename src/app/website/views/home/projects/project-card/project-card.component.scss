@@ -1,13 +1,18 @@
+@import 'mixins';
+
 :host {
   display: flex;
-  flex-basis: 58.17%;
+  aspect-ratio: 507/205;
+  width: 100%;
   background-color: rgb(80, 110, 110);
   border-radius: 3.6rem;
   cursor: pointer;
   overflow: hidden;
 
-
-
+    @include for-tablet-portrait {
+      aspect-ratio: initial;
+      height: 41rem;
+    }
 
   .card-content {
     position: relative;
