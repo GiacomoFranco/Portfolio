@@ -14,14 +14,14 @@ export class ProjectsComponent {
   projects = [
     {
       title: 'Control Legal',
-      image: {url: '/assets/images/control-legal.webp', position: 'top left'},
+      image: { url: '/assets/images/control-legal.webp', position: 'top left' },
       button: {
         title: 'View More',
-        redirectsTo: 'https://controllegal.netlify.app/',
+        redirectsTo: 'https://controllegalcl.com/',
       },
     },
     {
-      image: {url: '/assets/images/sinapsis.webp', position: 'top center'},
+      image: { url: '/assets/images/sinapsis.webp', position: 'top center' },
       title: 'Sinapsis Website',
       button: {
         title: 'View More',
